@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 antialiased;
+  }
+
+  label {
+    @apply font-bold;
+  }
+
+  table thead th {
+    @apply px-4 py-2 bg-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider;
+  }
+
+  table tbody tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+
+  button {
+    @apply h-11 rounded bg-blue-500 text-white hover:bg-blue-600 w-32 uppercase py-2 px-4 justify-self-end;
+  }
+}

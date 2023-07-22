@@ -1,40 +1,19 @@
-> **Warning**  
-> The `@remix-run/vercel` runtime adapter has been deprecated in favor of out of
-> the box Vercel functionality and will be removed in Remix v2.  
-> This means you don't have to use the Vercel template & can just use the Remix
-> template instead.
+### Instructions
 
-# Welcome to Remix!
+You will be using Remix as the framework and test data from https://jsonplaceholder.typicode.com/
 
-- [Remix Docs](https://remix.run/docs)
+1. Using the /posts endpoint from jsonplaceholder, create a sign up form with the following fields
+   a. Title (Required)
+   b. Body (Required)
+   c. UserName (Required)
+   d. I am a human (Required)
 
-## Deployment
-
-After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
-
-If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
-
-```sh
-npm i -g vercel
-vercel
-```
-
-It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
-
-## Development
-
-To run your Remix app locally, make sure your project's local dependencies are installed:
-
-```sh
-npm install
-```
-
-Afterwards, start the Remix development server like so:
-
-```sh
-npm run dev
-```
-
-Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
-
-If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
+2. UserName is a dropdown of the existing users from the /users endpoint
+3. I am a human is a checkbox.
+4. A submit button should update the values of the post resource on the API.
+5. Validation should happen on the server side and should be displayed on the form if any data is invalid.
+6. No react hooks should be implemented (e.g. No useState, No useEffect). Only hooks from Remix.
+7. There should be a loading spinner once the user submits the form until the data is received from server.
+8. A successful form submission should redirect to another route called /profile which should display the submitted values.
+9. Refreshing the /profile route should preserve the submitted values. Use session cookies to preserve the values
+10. Once you’re done with the project, you can zip it and send to me via email. Or you can host it somewhere where I can view it on the browser. Up to you. Thanks!
